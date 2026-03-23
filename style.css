@@ -499,6 +499,135 @@ section {
     height: 200px;
 }
 
+/* Skills Section */
+.skill-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 40px 30px;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    border-color: #333;
+    box-shadow: 0 10px 30px -15px rgba(255, 255, 255, 0.05);
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.skill-tags span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.skill-tags span:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.skill-tags i {
+    font-size: 1rem;
+}
+
+.skill-card:hover .card-glow {
+    top: 10px;
+    right: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+/* Contact Form */
+.form-style {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 40px 30px;
+    border-radius: 4px;
+    margin: 40px auto;
+    max-width: 600px;
+    transition: var(--transition);
+}
+
+.form-style:hover {
+    border-color: #333;
+    box-shadow: 0 10px 30px -15px rgba(255, 255, 255, 0.05);
+}
+
+.form-style form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-style label {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-style input,
+.form-style textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    padding: 12px 15px;
+    color: var(--text-primary);
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: var(--transition);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-style input::placeholder,
+.form-style textarea::placeholder {
+    color: var(--text-secondary);
+}
+
+.form-style input:focus,
+.form-style textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.form-style textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-style button[type="submit"] {
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
 /* Projects Section */
 .projects-grid {
     display: flex;
@@ -592,10 +721,15 @@ section {
 
 /* Contact Section */
 .contact-section {
+    min-height: 100vh;
+    padding: 100px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    justify-content: center;
-    min-height: 80vh;
 }
 
 .contact-eyebrow {
