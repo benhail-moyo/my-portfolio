@@ -21,11 +21,26 @@ links.forEach(link => {
     });
 });
 
+// Theme Toggle Logic
+const themeToggle = document.getElementById('theme-toggle');
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme === 'light') {
+    document.body.classList.add('light-theme');
+}
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-theme');
+    const isLight = document.body.classList.contains('light-theme');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
+
 // Scroll Header Hide/Show
 let lastScrollTop = 0;
 const navbar = document.querySelector('nav');
 
 window.addEventListener('scroll', () => {
+    const isLight = document.body.classList.contains('light-theme');
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop && scrollTop > 100) {
@@ -41,9 +56,9 @@ window.addEventListener('scroll', () => {
     if (scrollTop < 10) {
         navbar.classList.remove('scroll-up');
         navbar.style.boxShadow = 'none';
-        navbar.style.background = 'rgba(5, 5, 5, 0.8)';
+        navbar.style.background = isLight ? 'rgba(245, 245, 240, 0.85)' : 'rgba(5, 5, 5, 0.8)';
     } else {
-        navbar.style.background = 'rgba(5, 5, 5, 0.95)';
+        navbar.style.background = isLight ? 'rgba(245, 245, 240, 0.95)' : 'rgba(5, 5, 5, 0.95)';
     }
 
     lastScrollTop = scrollTop;

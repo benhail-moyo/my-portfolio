@@ -8,8 +8,8 @@
     <meta name="description" content="Software Developer specializing in AI, ML, and Cybersecurity.">
     <link rel="stylesheet" href="style.css">
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com">
+    <link href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:ital,wght@0,300;0,400;1,400&display=swap"
         rel="stylesheet">
@@ -29,6 +29,12 @@
             <li><a href="#skills" class="nav-link">Skills</a></li>
             <li><a href="#projects" class="nav-link">Projects</a></li>
             <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark theme">
+                    <i class="fa-solid fa-moon" id="theme-icon-moon"></i>
+                    <i class="fa-solid fa-sun" id="theme-icon-sun"></i>
+                </button>
+            </li>
         </ul>
         <div class="hamburger">
             <span class="bar"></span>
@@ -42,7 +48,7 @@
         <section id="hero" class="hero-section fade-in">
             <div class="hero-content">
                 <p class="subtitle">&gt;_ init system</p>
-                <h1 class="glitch" data-text="Creating Light in the Shadows">Creating Light in the Shadows</h1>
+                <h1 class="glitch" data-text="Benhail Moyo">Benhail Moyo</h1>
                 <p class="hero-description">Software Developer &lt;/&gt; AI &amp; ML Enthusiast &lt;/&gt; Security
                     Architect</p>
                 <div class="hero-cta">
@@ -173,13 +179,51 @@
         <!-- Projects Section -->
         <section id="projects" class="projects-section fade-in">
             <div class="section-header">
-                <h2>04. Case Files</h2>
+                <h2>04. Projects</h2>
                 <div class="decorative-line"></div>
             </div>
             <div class="projects-grid">
 
                 <!-- Project 1 -->
-                <div class="project-item">
+                <div class="project-item project-library">
+                    <!-- Floating background icons -->
+                    <div class="floating-icons" aria-hidden="true">
+                        <svg class="float-icon float-book-1" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                        </svg>
+                        <svg class="float-icon float-gear-1" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                        </svg>
+                        <svg class="float-icon float-book-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                        </svg>
+                        <svg class="float-icon float-gear-2" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                        </svg>
+                        <svg class="float-icon float-book-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                            <line x1="8" y1="7" x2="16" y2="7" />
+                            <line x1="8" y1="11" x2="14" y2="11" />
+                        </svg>
+                        <svg class="float-icon float-gear-3" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                        </svg>
+                    </div>
                     <div class="project-info">
                         <span class="project-type">System Architecture</span>
                         <h3>Library Management System</h3>
@@ -199,7 +243,41 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-item">
+                <div class="project-item project-security">
+                    <!-- Floating cybersecurity icons -->
+                    <div class="floating-icons" aria-hidden="true">
+                        <svg class="float-icon float-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                        </svg>
+                        <svg class="float-icon float-key" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" />
+                        </svg>
+                        <svg class="float-icon float-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg>
+                        <svg class="float-icon float-bug" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="8" y="6" width="8" height="14" rx="4" />
+                            <path
+                                d="M6 18h-2M6 12H2M6 6h-2M18 18h2M18 12h4M18 6h2M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+                        </svg>
+                        <svg class="float-icon float-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                        <svg class="float-icon float-terminal" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <polyline points="4 17 10 11 4 5" />
+                            <line x1="12" y1="19" x2="20" y2="19" />
+                        </svg>
+                    </div>
                     <div class="project-info">
                         <span class="project-type">Security Tool</span>
                         <h3>Password Strength Checker</h3>
@@ -219,7 +297,51 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-item">
+                <div class="project-item project-initiatives">
+                    <!-- Floating research/classified icons -->
+                    <div class="floating-icons" aria-hidden="true">
+                        <svg class="float-icon float-search" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                        <svg class="float-icon float-brain" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z" />
+                            <line x1="10" y1="22" x2="14" y2="22" />
+                            <line x1="9" y1="9" x2="15" y2="9" />
+                            <line x1="12" y1="6" x2="12" y2="12" />
+                        </svg>
+                        <svg class="float-icon float-flask" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M9 3h6M10 3v6.5L4 20h16L14 9.5V3" />
+                            <line x1="7" y1="16" x2="17" y2="16" />
+                        </svg>
+                        <svg class="float-icon float-radar" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="6" />
+                            <circle cx="12" cy="12" r="2" />
+                            <line x1="12" y1="2" x2="12" y2="6" />
+                            <line x1="12" y1="18" x2="12" y2="22" />
+                        </svg>
+                        <svg class="float-icon float-circuit" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <rect x="4" y="4" width="6" height="6" rx="1" />
+                            <rect x="14" y="14" width="6" height="6" rx="1" />
+                            <path d="M10 7h4v10h-4" />
+                            <line x1="7" y1="10" x2="7" y2="14" />
+                            <line x1="17" y1="10" x2="17" y2="14" />
+                        </svg>
+                        <svg class="float-icon float-atom" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="2" />
+                            <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(0 12 12)" />
+                            <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)" />
+                            <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)" />
+                        </svg>
+                    </div>
                     <div class="project-info">
                         <span class="project-type">Classified Operations</span>
                         <h3>Ongoing Initiatives</h3>
@@ -258,22 +380,24 @@
                             <label for="name">Name:</label>
                             <input type="text" id="name" name="name" required placeholder="Enter your full name">
                         </div>
-                        
+
                         <div>
                             <label for="interests">Field or Interests:</label>
-                            <input type="text" id="interests" name="interests" required placeholder="e.g Software Developer, Web developer, Recruiter">
+                            <input type="text" id="interests" name="interests" required
+                                placeholder="e.g Software Developer, Web developer, Recruiter">
                         </div>
-                        
+
                         <div>
                             <label for="email">Email:</label>
                             <input type="email" id="email" name="email" required placeholder="youremail@example.com">
                         </div>
-                        
+
                         <div>
                             <label for="message">Message:</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Write your message here..."></textarea>
                         </div>
-                        
+
                         <button type="submit" class="btn">Send Message</button>
                     </form>
                 </section>

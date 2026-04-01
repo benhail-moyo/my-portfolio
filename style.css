@@ -17,6 +17,114 @@
     --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+/* Light Theme */
+body.light-theme {
+    --bg-color: #f5f5f0;
+    --text-primary: #1a1a1a;
+    --text-secondary: #555555;
+    --accent-color: #1a1a1a;
+    --accent-hover: #444444;
+    --border-color: #d4d4d4;
+    --card-bg: #ffffff;
+}
+
+body.light-theme .noise-overlay {
+    opacity: 0.02;
+}
+
+body.light-theme nav {
+    background: rgba(245, 245, 240, 0.85);
+}
+
+body.light-theme nav.scroll-up {
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .glitch {
+    color: #1a1a1a;
+}
+
+body.light-theme .glitch::before,
+body.light-theme .glitch::after {
+    background: var(--bg-color);
+}
+
+body.light-theme .project-item:hover {
+    background: #f0f0eb;
+}
+
+body.light-theme .skill-tags span {
+    background: rgba(0, 0, 0, 0.04);
+}
+
+body.light-theme .skill-tags span:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .form-style input,
+body.light-theme .form-style textarea {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+body.light-theme .form-style input:focus,
+body.light-theme .form-style textarea:focus {
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .card-glow {
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+body.light-theme ::selection {
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+}
+
+body.light-theme .logo::after {
+    background-color: #e53e3e;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent-color);
+    transform: rotate(15deg);
+}
+
+.theme-toggle #theme-icon-sun {
+    display: none;
+    font-size: 0.95rem;
+}
+
+.theme-toggle #theme-icon-moon {
+    display: block;
+    font-size: 0.85rem;
+}
+
+body.light-theme .theme-toggle #theme-icon-sun {
+    display: block;
+}
+
+body.light-theme .theme-toggle #theme-icon-moon {
+    display: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -559,6 +667,361 @@ section {
     height: 200px;
 }
 
+/* Floating Book & Gear Animations — Library Card */
+.project-library {
+    overflow: hidden;
+}
+
+.floating-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.project-library .project-info {
+    position: relative;
+    z-index: 1;
+}
+
+.float-icon {
+    position: absolute;
+    opacity: 0.07;
+    color: var(--text-primary);
+    stroke: var(--text-primary);
+}
+
+/* Individual icon placement & animation assignment */
+.float-book-1 {
+    width: 48px;
+    height: 48px;
+    top: 8%;
+    right: 10%;
+    animation: floatBook1 8s ease-in-out infinite;
+}
+
+.float-gear-1 {
+    width: 40px;
+    height: 40px;
+    top: 55%;
+    right: 5%;
+    animation: floatGear1 10s ease-in-out infinite 1s;
+}
+
+.float-book-2 {
+    width: 36px;
+    height: 36px;
+    top: 70%;
+    right: 25%;
+    animation: floatBook2 9s ease-in-out infinite 2s;
+}
+
+.float-gear-2 {
+    width: 32px;
+    height: 32px;
+    top: 15%;
+    right: 40%;
+    animation: floatGear2 12s ease-in-out infinite 0.5s;
+}
+
+.float-book-3 {
+    width: 42px;
+    height: 42px;
+    top: 40%;
+    right: 55%;
+    animation: floatBook3 11s ease-in-out infinite 3s;
+}
+
+.float-gear-3 {
+    width: 28px;
+    height: 28px;
+    top: 80%;
+    right: 70%;
+    animation: floatGear3 7s ease-in-out infinite 1.5s;
+}
+
+/* Hover intensify — icons become more visible on card hover */
+.project-library:hover .float-icon {
+    opacity: 0.15;
+    transition: opacity 0.6s ease;
+}
+
+/* Keyframes — each icon has its own unique float path */
+@keyframes floatBook1 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25%      { transform: translate(-12px, -18px) rotate(5deg); }
+    50%      { transform: translate(8px, -30px) rotate(-3deg); }
+    75%      { transform: translate(-5px, -14px) rotate(4deg); }
+}
+
+@keyframes floatGear1 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33%      { transform: translate(-10px, -20px) rotate(120deg); }
+    66%      { transform: translate(6px, -10px) rotate(240deg); }
+}
+
+@keyframes floatBook2 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    20%      { transform: translate(10px, -15px) rotate(-4deg); }
+    50%      { transform: translate(-8px, -28px) rotate(6deg); }
+    80%      { transform: translate(5px, -10px) rotate(-2deg); }
+}
+
+@keyframes floatGear2 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50%      { transform: translate(-15px, -22px) rotate(180deg); }
+}
+
+@keyframes floatBook3 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    30%      { transform: translate(14px, -20px) rotate(-6deg); }
+    60%      { transform: translate(-6px, -35px) rotate(3deg); }
+    85%      { transform: translate(3px, -12px) rotate(-1deg); }
+}
+
+@keyframes floatGear3 {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25%      { transform: translate(-8px, -14px) rotate(90deg); }
+    50%      { transform: translate(5px, -24px) rotate(180deg); }
+    75%      { transform: translate(-3px, -10px) rotate(270deg); }
+}
+
+/* Light theme — slightly darker icons for visibility on light bg */
+body.light-theme .float-icon {
+    opacity: 0.08;
+    color: #1a1a1a;
+    stroke: #1a1a1a;
+}
+
+body.light-theme .project-library:hover .float-icon {
+    opacity: 0.18;
+}
+
+/* Floating Cybersecurity Animations — Security Card */
+.project-security {
+    overflow: hidden;
+}
+
+.project-security .project-info {
+    position: relative;
+    z-index: 1;
+}
+
+/* Individual cybersecurity icon placement & animation */
+.float-lock {
+    width: 44px;
+    height: 44px;
+    top: 10%;
+    right: 8%;
+    animation: floatLock 9s ease-in-out infinite;
+}
+
+.float-key {
+    width: 38px;
+    height: 38px;
+    top: 60%;
+    right: 4%;
+    animation: floatKey 11s ease-in-out infinite 1.2s;
+}
+
+.float-shield {
+    width: 42px;
+    height: 42px;
+    top: 75%;
+    right: 30%;
+    animation: floatShield 8s ease-in-out infinite 2.5s;
+}
+
+.float-bug {
+    width: 30px;
+    height: 30px;
+    top: 20%;
+    right: 45%;
+    animation: floatBug 10s ease-in-out infinite 0.8s;
+}
+
+.float-eye {
+    width: 36px;
+    height: 36px;
+    top: 45%;
+    right: 60%;
+    animation: floatEye 12s ease-in-out infinite 3s;
+}
+
+.float-terminal {
+    width: 32px;
+    height: 32px;
+    top: 82%;
+    right: 72%;
+    animation: floatTerminal 7.5s ease-in-out infinite 1.8s;
+}
+
+/* Hover intensify — security card */
+.project-security:hover .float-icon {
+    opacity: 0.15;
+    transition: opacity 0.6s ease;
+}
+
+/* Keyframes — cybersecurity icons */
+@keyframes floatLock {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25%      { transform: translate(-10px, -20px) rotate(-8deg); }
+    50%      { transform: translate(6px, -32px) rotate(5deg); }
+    75%      { transform: translate(-4px, -12px) rotate(-3deg); }
+}
+
+@keyframes floatKey {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    30%      { transform: translate(12px, -18px) rotate(15deg); }
+    60%      { transform: translate(-8px, -28px) rotate(-10deg); }
+    85%      { transform: translate(4px, -8px) rotate(5deg); }
+}
+
+@keyframes floatShield {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50%      { transform: translate(-10px, -25px) scale(1.08); }
+}
+
+@keyframes floatBug {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    20%      { transform: translate(-6px, -12px) rotate(10deg); }
+    40%      { transform: translate(8px, -22px) rotate(-15deg); }
+    60%      { transform: translate(-10px, -30px) rotate(20deg); }
+    80%      { transform: translate(4px, -15px) rotate(-5deg); }
+}
+
+@keyframes floatEye {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33%      { transform: translate(-14px, -16px) rotate(3deg); }
+    66%      { transform: translate(8px, -26px) rotate(-4deg); }
+}
+
+@keyframes floatTerminal {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25%      { transform: translate(10px, -15px) rotate(-6deg); }
+    50%      { transform: translate(-5px, -28px) rotate(8deg); }
+    75%      { transform: translate(8px, -10px) rotate(-3deg); }
+}
+
+/* Light theme — security card */
+body.light-theme .project-security:hover .float-icon {
+    opacity: 0.18;
+}
+
+/* Floating Research Animations — Initiatives Card */
+.project-initiatives {
+    overflow: hidden;
+}
+
+.project-initiatives .project-info {
+    position: relative;
+    z-index: 1;
+}
+
+/* Individual research icon placement & animation */
+.float-search {
+    width: 46px;
+    height: 46px;
+    top: 8%;
+    right: 7%;
+    animation: floatSearch 9s ease-in-out infinite;
+}
+
+.float-brain {
+    width: 40px;
+    height: 40px;
+    top: 55%;
+    right: 3%;
+    animation: floatBrain 11s ease-in-out infinite 1.5s;
+}
+
+.float-flask {
+    width: 36px;
+    height: 36px;
+    top: 72%;
+    right: 28%;
+    animation: floatFlask 8.5s ease-in-out infinite 2s;
+}
+
+.float-radar {
+    width: 34px;
+    height: 34px;
+    top: 18%;
+    right: 42%;
+    animation: floatRadar 13s ease-in-out infinite 0.5s;
+}
+
+.float-circuit {
+    width: 38px;
+    height: 38px;
+    top: 42%;
+    right: 58%;
+    animation: floatCircuit 10s ease-in-out infinite 3.2s;
+}
+
+.float-atom {
+    width: 30px;
+    height: 30px;
+    top: 80%;
+    right: 75%;
+    animation: floatAtom 7s ease-in-out infinite 1s;
+}
+
+/* Hover intensify — initiatives card */
+.project-initiatives:hover .float-icon {
+    opacity: 0.15;
+    transition: opacity 0.6s ease;
+}
+
+/* Keyframes — research/classified icons */
+@keyframes floatSearch {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25%      { transform: translate(-14px, -18px) rotate(10deg); }
+    50%      { transform: translate(6px, -30px) rotate(-5deg); }
+    75%      { transform: translate(-8px, -12px) rotate(7deg); }
+}
+
+@keyframes floatBrain {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33%      { transform: translate(-10px, -22px) scale(1.05); }
+    66%      { transform: translate(8px, -14px) scale(0.97); }
+}
+
+@keyframes floatFlask {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    30%      { transform: translate(10px, -16px) rotate(-8deg); }
+    60%      { transform: translate(-6px, -28px) rotate(6deg); }
+    85%      { transform: translate(4px, -10px) rotate(-2deg); }
+}
+
+@keyframes floatRadar {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50%      { transform: translate(-12px, -20px) rotate(180deg); }
+}
+
+@keyframes floatCircuit {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    20%      { transform: translate(8px, -10px) rotate(4deg); }
+    40%      { transform: translate(-10px, -24px) rotate(-6deg); }
+    60%      { transform: translate(6px, -32px) rotate(8deg); }
+    80%      { transform: translate(-4px, -14px) rotate(-3deg); }
+}
+
+@keyframes floatAtom {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25%      { transform: translate(-6px, -16px) rotate(90deg); }
+    50%      { transform: translate(10px, -26px) rotate(180deg); }
+    75%      { transform: translate(-8px, -8px) rotate(270deg); }
+}
+
+/* Light theme — initiatives card */
+body.light-theme .project-initiatives:hover .float-icon {
+    opacity: 0.18;
+}
+
 /* Contact Form */
 .form-style {
     background: var(--card-bg);
@@ -857,5 +1320,12 @@ footer {
 
     .scroll-indicator {
         left: 20px;
+    }
+}
+
+/* Light theme mobile nav override */
+@media screen and (max-width: 768px) {
+    body.light-theme .nav-links {
+        background-color: #f5f5f0;
     }
 }
