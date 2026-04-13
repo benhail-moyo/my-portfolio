@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Benhail's Portfolio</title>
+    <meta name="description" content="Software Developer specializing in AI, ML, and Cybersecurity.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com">
+    <link href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:ital,wght@0,300;0,400;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+
+    <nav>
+        <div class="logo">Ben-Hail</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="index.html#interests" class="nav-link">Interests</a></li>
+            <li><a href="skills.html" class="nav-link">Skills</a></li>
+            <li><a href="index.html#education" class="nav-link">Education</a></li>
+            <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark theme">
+                    <i class="fa-solid fa-moon" id="theme-icon-moon"></i>
+                    <i class="fa-solid fa-sun" id="theme-icon-sun"></i>
+                </button>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <main>
+        <section id="contact" class="contact-section fade-in">
+            <div class="section-header" style="justify-content: left;">
+                <h2>06. Contact</h2>
+                <div class="decorative-line"></div>
+            </div>
+            <div class="contact-content">
+                <h3>Let's Connect</h3>
+                <p class="contact-text">Currently seeking new opportunities and alliances. Whether you have a
+                    challenging project, an ongoing investigation, or just want to talk tech, the lines are open.
+                </p>
+                <div class="social-links">
+                    <!-- Replace the href links inside the quotes with your actual profile links -->
+                    <a href="https://github.com/benhail-moyo" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/benhail-moyo-7014a23b4/" target="_blank" rel="noopener noreferrer"><i
+                            class="fa-brands fa-linkedin-in"></i></a>
+                    <!-- WhatsApp: Replace 1234567890 with your phone number including country code (e.g., 1234567890) -->
+                    <a href="https://wa.me/+263780208761?text=Hi%20Benhail!%20I%20saw%20your%20portfolio." target="_blank"
+                        rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="tel:+263780208761"><i class="fa-solid fa-phone"></i></a>
+                </div>
+                <section class="form-style">
+                    <form action="https://formsubmit.co/benhailmoyo007@gmail.com" method="POST">
+                        <div>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+
+                        <div>
+                            <label for="interests">Field or Interests:</label>
+                            <input type="text" id="interests" name="interests" required
+                                placeholder="e.g Software Developer, Web developer, Recruiter">
+                        </div>
+
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required placeholder="youremail@example.com">
+                        </div>
+
+                        <div>
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="Write your message here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </section>
+                <a href="mailto:benhailmoyo007@gmail.com" class="btn btn-primary btn-large">Quick Mail Me</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; <span id="year"></span> Benhail-Codez. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

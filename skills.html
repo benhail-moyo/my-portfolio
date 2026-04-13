@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Benhail's Portfolio</title>
+    <meta name="description" content="Benhail's technical skills in programming languages, frameworks, tools, and platforms.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com">
+    <link href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:ital,wght@0,300;0,400;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+
+    <nav>
+        <div class="logo">Ben-Hail</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="index.html#interests" class="nav-link">Interests</a></li>
+            <li><a href="skills.html" class="nav-link">Skills</a></li>
+            <li><a href="index.html#education" class="nav-link">Education</a></li>
+            <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark theme">
+                    <i class="fa-solid fa-moon" id="theme-icon-moon"></i>
+                    <i class="fa-solid fa-sun" id="theme-icon-sun"></i>
+                </button>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section fade-in">
+            <div class="section-header">
+                <h2>04. Skills</h2>
+                <div class="decorative-line"></div>
+            </div>
+            <div class="cards-container">
+                <div class="skill-card">
+                    <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span><i class="devicon-python-plain colored"></i> Python</span>
+                        <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                        <span><i class="devicon-csharp-plain colored"></i> C#</span>
+                        <span><i class="devicon-java-plain colored"></i> Java</span>
+                        <span><i class="fa-solid fa-database" style="color: #336791;"></i> SQL</span>
+                        <span><i class="devicon-html5-plain colored"></i> HTML/CSS</span>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="skill-card">
+                    <div class="card-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-tags">
+                        <span><i class="devicon-react-original colored"></i> React</span>
+                        <span><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+                        <span><i class="devicon-django-plain colored"></i> Django</span>
+                        <span><i class="devicon-fastapi-plain colored"></i> FastAPI</span>
+                        <span><i class="devicon-tailwindcss-plain colored"></i> Tailwind CSS</span>
+                        <span><i class="devicon-supabase-plain colored"></i> Supabase</span>
+                        <span><i class="devicon-pytorch-plain colored"></i> PyTorch</span>
+                        <span><i class="devicon-bootstrap-plain colored"></i> Bootstrap</span>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+                <div class="skill-card">
+                    <div class="card-icon"><i class="fa-solid fa-tools"></i></div>
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span><i class="devicon-git-plain colored"></i> Git</span>
+                        <span><i class="devicon-linux-plain colored"></i> Linux</span>
+                        <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                        <span><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                    </div>
+                    <div class="card-glow"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; <span id="year"></span> Benhail-Codez. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

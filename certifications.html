@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications - Benhail's Portfolio</title>
+    <meta name="description" content="Software Developer specializing in AI, ML, and Cybersecurity.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com">
+    <link href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Code+Pro:ital,wght@0,300;0,400;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+</head>
+
+<body>
+    <div class="noise-overlay"></div>
+
+    <nav>
+        <div class="logo">Ben-Hail</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="index.html#interests" class="nav-link">Interests</a></li>
+            <li><a href="skills.html" class="nav-link">Skills</a></li>
+            <li><a href="index.html#education" class="nav-link">Education</a></li>
+            <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+            <li>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark theme">
+                    <i class="fa-solid fa-moon" id="theme-icon-moon"></i>
+                    <i class="fa-solid fa-sun" id="theme-icon-sun"></i>
+                </button>
+            </li>
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <main>
+        <section id="certifications" class="certifications-section fade-in">
+            <div class="section-header">
+                <h2>04. Certifications</h2>
+                <div class="decorative-line"></div>
+            </div>
+            <div class="cards-container">
+                <!-- Certification 1: Data Science -->
+                <div class="certification-card" data-url="https://matsuolab.com/">
+                    <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Data Science</h3>
+                    <p class="cert-provider">MatsuoLab</p>
+                    <p class="cert-description">Industry-grade, globally recognized Data Science certification covering data processing, cleaning, AI model training, Machine Learning, Deep Learning, and advanced technologies for solving business problems.</p>
+                    <div class="cert-meta">April 2026 - Present</div>
+                    <div class="card-glow"></div>
+                </div>
+
+                <!-- Certification 2: AI in Cybersecurity -->
+                <div class="certification-card" data-url="https://alison.com/shop?course=7295&score=96" href="https://alison.com/shop?course=7295&score=96">
+                    <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>AI in Cybersecurity</h3>
+                    <p class="cert-provider">Alison</p>
+                    <p class="cert-description">Specialized course on the intersection of AI and cybersecurity principles, covering AI-driven threat detection, anomaly detection algorithms, and ethical considerations in AI security applications.</p>
+                    <div class="cert-meta">February 2026</div>
+                    <div class="card-glow"></div>
+                    <div class="card-link">
+                        <a href="https://alison.com/shop?course=7295&score=96" target="_blank" rel="noopener noreferrer">View Certification</a>
+                    </div>
+
+                </div>
+  <!-- Certification 4: Kali Linux for Ethical Hacking -->
+                <div class="certification-card" data-url="https://alison.com/shop?course=7828&score=100" href="https://alison.com/shop?course=7828&score=100">
+                    <div class="card-icon"><i class="fa-solid fa-terminal"></i></div>
+                    <h3>Kali Linux Ethical Hacking</h3>
+                    <p class="cert-provider">Alison</p>
+                    <p class="cert-description">Practical course on using Kali Linux for ethical hacking and penetration testing, covering Kali Linux tools, vulnerability assessment, and ethical hacking methodologies.</p>
+                    <div class="cert-meta">March 2026</div>
+                    <div class="card-glow"></div>
+                    <div class="card-link">
+                        <a href="https://alison.com/shop?course=7828&score=100" target="_blank" rel="noopener noreferrer">View Certification</a>
+                </div></div>
+                <!-- Certification 3: SQL Injection Attacks -->
+                <div class="certification-card" data-url="https://www.eccouncil.org/" href="https://www.eccouncil.org/">
+                    <div class="card-icon"><i class="fa-solid fa-lock"></i></div>
+                    <h3>SQL Injection Attacks</h3>
+                    <p class="cert-provider">EC-Council</p>
+                    <p class="cert-description">Comprehensive course on identifying and preventing SQL injection vulnerabilities in web applications, including secure coding practices and mitigation strategies to protect against database attacks.</p>
+                    <div class="cert-meta">February 2026</div>
+                    <div class="card-glow"></div>
+                    <div class="card-link">
+                        <a href="https://www.eccouncil.org/" target="_blank" rel="noopener noreferrer">View Certification</a>
+                </div>
+
+              
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; <span id="year"></span> Benhail-Codez. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
