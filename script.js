@@ -112,3 +112,15 @@ document.head.appendChild(style);
 
 // Start typewriter after a short delay
 setTimeout(typeWriter, 500);
+
+// Certification Cards Click Handler
+const certificationCards = document.querySelectorAll('.certification-card');
+certificationCards.forEach(card => {
+    card.addEventListener('click', () => {
+        const url = card.getAttribute('data-url');
+        if (url) {
+            window.open(url, '_blank');
+        }
+    });
+});
+
